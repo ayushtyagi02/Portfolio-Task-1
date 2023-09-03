@@ -85,6 +85,52 @@ border: 1px solid red;
 .box:hover{
     transform: scale(1.1);
 }
+button {
+    --c:  #229091; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+  
+  
+  
+  /* body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 40px;
+    /* background: #F2DCA2; 
+  } */
+  button {
+    font-family: system-ui, sans-serif;
+    color: white;
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: 400;  
+    border: none;
+  }
 .wid{
     position: absolute;
     background-color: red;
@@ -100,7 +146,9 @@ border: 1px solid red;
     transition-timing-function: ease;
    
 }
-
+.rdmore{
+    transform: translate(5px);
+}
 p{  
     user-select: none;
     color: rgb(0, 0, 0);
@@ -364,4 +412,93 @@ background-size: cover; */
     
     gap: 1rem;
 }
-
+.about-skills{
+    border-right: 4px solid rgba(255, 163, 163, 0.399);
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 5rem;
+    height: 30rem;
+    -webkit-box-shadow: 10px 3px 9px -7px rgba(0,0,0,0.59);
+    -moz-box-shadow: 10px 3px 9px -7px rgba(0,0,0,0.59);
+    box-shadow: 10px 3px 9px -7px rgba(0,0,0,0.59);
+    
+  }
+  .about-skills h1{
+    font-size: 5rem;
+    /* color: rgb(242, 69, 69); */
+  }
+  .about-skills p{
+    font-size: 1.3rem;
+    transform: translateY(3rem);
+  }
+  .skill-section{
+    /* outline: 1px solid red; */
+    margin-top: 3rem;
+    height: 30rem;
+    width: auto;
+    background-color: white;
+    position:relative;
+    display: flex;
+  }
+  .skill-section-images{
+    width: 40%;
+    margin-right: 4rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;  
+    justify-content: space-around;
+    transform: translateY(4rem);
+  }
+  
+  .skill-section-logo{
+    background: rgb(222, 180, 199);
+     background: radial-gradient(circle, rgb(233, 209, 219) 0%, rgb(175, 210, 250) 100%);
+    /* position: absolute; */
+    height: 3rem;
+    width: 100%;
+    /* transform: translateY(rem); */
+    
+  }
+  .all-images{
+    -webkit-box-shadow: -1px 0px 14px 1px rgba(0,0,0,0.48);
+  -moz-box-shadow: -1px 0px 14px 1px rgba(0,0,0,0.48);
+  box-shadow: -1px 0px 14px 1px rgba(0,0,0,0.48);
+     height: 20%;
+     cursor: pointer;
+     /* border: 1px solid red; */
+     width: 30%;
+     border-radius: 10px;
+     transition: ease-out 300ms;
+     opacity: .5;
+    }
+    .all-images:hover{
+      transform: scale(1.1);
+      opacity: 1;
+      border-radius: 10px;
+    }
+    .skill-head{
+        size: 5rem;
+        text-decoration: underline;
+    }
+    .skill-name{
+      padding: 0;
+      margin: 0;
+      /* position: absolute; */
+      /* outline: 1px solid red; */
+      width: 20rem;
+      font-size: 5.5vw;
+      transform: translateY(1.4vw) translateX(60vw);
+      color: rgba(185, 136, 157, 0.5) ;
+    }
+.skill-list{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;}
+.li-item{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
